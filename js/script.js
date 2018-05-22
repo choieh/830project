@@ -13,13 +13,13 @@ $(function(){
 	
 		if( $(window).width>767 ){ /*브라우저의 폭이>767*/
 		
-			$("h1").css({"margin-left":-$("h1").width()/2,
+			$(".middle_logo").css({"margin-left":-$(".middle_logo").width()/2,
 			"top":$("#home h2").offset().top-70
 			});
 			
 		}else{ /*모바일*/
 			
-			$("h1").css({"margin-left":-$("h1").width()/2,
+			$(".middle_logo").css({"margin-left":-$(".middle_logo").width()/2,
 			"top":$("#home h2").offset().top-40
 			});
 			
