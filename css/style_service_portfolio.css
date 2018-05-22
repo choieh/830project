@@ -20,6 +20,7 @@
 	float:left;
 	width:33.3333%;
 	height:1080px;
+	
 	text-indent:-9999px;
 	background-position:50% 50%;
 	background-size:cover;
@@ -85,7 +86,25 @@
 }
 
 
-
+/*portfolio*/
+#portfolio{
+	width:100%;
+}
+#portfolio>.box-container{
+	width:100%;
+	height:100%;
+	*zoom:1;
+}
+#portfolio>.box-container:after{
+	display:block; clear:both; content:"";
+}
+#portfolio>.box-container>li{
+	float:left;
+	width:33.3333%;
+	height:50%;
+	background-color:#FF0;
+	outline:1px solid red;
+}
 
 
 
