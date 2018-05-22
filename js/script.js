@@ -1,5 +1,43 @@
 $(function(){
 	
+	
+	//각 섹션별 top값
+	var top_container = [
+		$("#about").offset().top,
+		$("#services").offset().top,
+		$("#portfolio").offset().top,
+		$("#contact").offset().top
+	];
+	
+	console.log($("#about").offset().top,$("#services").offset().top,$("#portfolio").offset().top,$("#contact").offset().top);
+	
+	var nowIdx = 1;
+
+	$(".gnb>li>a").on("click",function(evt){
+		nowIdx = $(".gnb>li>a").index(this);
+		$("html,body").animate({scrollTop:top_container[nowIdx]-100});
+		evt.preventDefault();
+	});
+	
+	
+	//상단 로고 클릭시 맨위로 스크롤됨
+	$(".main_logo>a").on("click",function(evt){
+		$("html,body").animate({scrollTop:0});
+		evt.preventDefault();
+	});
+	
+	//헤더 스크롤 이벤트
+	$(window).on("scroll",function(){
+		if($(window).scrollTop()>10){
+			$("header").css("background","rgba(255,255,255,0.8)");
+			$("header>nav>.gnb>li>a").css("color","#000");
+		}else{
+			$("header").css("background","rgba(255,255,255,0)");
+			$("header>nav>.gnb>li>a").css("color","#fff");
+		}
+		
+	});
+	
 	/*
 		load 이벤트: 문서의 텍스트와 이미지등 모든 데이터를 메모리에 적재완료한 시점에 작동한다.
 	*/
@@ -13,13 +51,13 @@ $(function(){
 	
 		if( $(window).width>767 ){ /*브라우저의 폭이>767*/
 		
-			$("h1").css({"margin-left":-$("h1").width()/2,
+			$(".middle_logo").css({"margin-left":-$(".middle_logo").width()/2,
 			"top":$("#home h2").offset().top-70
 			});
 			
 		}else{ /*모바일*/
 			
-			$("h1").css({"margin-left":-$("h1").width()/2,
+			$(".middle_logo").css({"margin-left":-$(".middle_logo").width()/2,
 			"top":$("#home h2").offset().top-40
 			});
 			
