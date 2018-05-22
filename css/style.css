@@ -108,10 +108,7 @@ header>.btn, header>.mobile{
 	position:relative;
 	width:100%;
 	height:690px;
-	background-image:url(../images/rwd_home_bg_1.jpg);
-	background-position:center center;
-	background-size:cover;
-	background-repeat:no-repeat;
+	background-color:#FFF;
 	
 }
 
@@ -137,8 +134,8 @@ header>.btn, header>.mobile{
 #home>.intro>h2{
 	position:absolute;
 	top:50%;
-	left:500px;
-	margin-top:-128px;
+	left:50%;
+	transform: translate(-50%,-50%);
 	display:block;
 	width:586px;
 	height:256px;
@@ -151,14 +148,13 @@ header>.btn, header>.mobile{
 
 #home>.intro>p{
 	position:absolute;
-	top:50%;
-	left:500px;
-	transform: translate(0,-50%);
-	color:#f7f7f7;
+	top:200px;
+	left:50%;
+	transform: translate(-50%,-50%);
+	color:#000;
 	line-height:1.8;/* 1.8 = 180% */
 	text-align:center;
 	letter-spacing:1px;
-	z-index:2000;
 }
 
 
