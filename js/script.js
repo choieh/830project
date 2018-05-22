@@ -58,6 +58,7 @@ $(function(){
 	$(".loading").delay(350).fadeOut(1000);
 	
 	$("#home").height($(window).height());//DOM트리 구성이 완료된 시점(ready)에 높이값 설정
+	$("#about").height($(window).height());//DOM트리 구성이 완료된 시점(ready)에 높이값 설정
 	$("#services").height($(window).height());
 	$("#portfolio").height($(window).height());
 	$("#contact").height($(window).height());
