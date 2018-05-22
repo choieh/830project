@@ -38,11 +38,11 @@ $(function(){
 			
 			if($(window).scrollTop()>10){
 			
-			$("header").css("background","rgba(255,255,255,0.8)");
-			$("header>nav>.gnb>li>a").css("color","#000");
+			$("header").css("background","rgba(0,0,0,0.8)");
+			$("header>nav>.gnb>li>a").css("color","#fff");
 			}else{
 				$("header").css("background","rgba(255,255,255,0)");
-				$("header>nav>.gnb>li>a").css("color","#fff");
+				$("header>nav>.gnb>li>a").css("color","#000");
 			}
 		}
 		
