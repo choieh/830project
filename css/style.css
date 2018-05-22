@@ -94,6 +94,11 @@ header>nav>.gnb>li>a{
 	z-index:100;
 }
 
+header>.btn, header>.mobile{
+	display:none;
+}
+
+
 /*인트로*/
 #home{
 	position:relative;
@@ -188,8 +193,19 @@ header>nav>.gnb>li>a{
 }
 
 
-/*about*/
-
+/*footer*/
+footer{
+	width:100%;
+	height:50px;
+}
+footer>address{
+	display:block;
+	width:100%;
+	height:50px;
+	font-size:12px;
+	line-height:50px;
+	text-align:center;
+}
 
 
 
@@ -197,7 +213,10 @@ header>nav>.gnb>li>a{
 @media screen and (max-width:768px){
 	
 	/*인트로*/
-	#home{height:560px !important; }
+	#home{
+		position:absolute;
+		top:100px;
+		height:560px !important; }
 	/*
 		!를 붙이는 이유는 height값을 제이쿼리에서 동적으로 지정하기 때문(1000점)
 	*/
@@ -228,6 +247,86 @@ header>nav>.gnb>li>a{
 	#home>.intro>p>span{
 		display:block;
 
+	}
+	
+	header>nav{
+		display:none;
+	}
+	
+	/*모바일 메뉴버튼*/
+	header>.btn{
+		position:fixed;
+		top:10px;
+		right:10px;
+		width:50px;
+		height:50px;
+		padding:5px;
+		background-color:#FFF;
+		border-radius:10px;
+		z-index:3000;
+		cursor:pointer;
+	}
+	header>.btn>i{
+		display:block;
+		width:50px;
+		height:50px;
+		font-size:50px;
+		text-align:center;
+	}
+	
+	/*클릭 전*/
+	header>.btn, header>.mobile{
+		display:block;
+	}
+	
+	header>.mobile>nav{
+		display:none;
+	}
+	
+	
+		/*메뉴버튼 클릭 시*/
+	header>.btn>.fa-times{
+		display:none;
+		position:absolute;
+		top:10;
+		width:50px;
+		height:50px;
+		font-size:50px;
+		text-align:center;
+	}
+
+
+		
+	header>.mobile>nav.on{
+		position:fixed;
+		top:0;
+		left:0;
+		right:0;
+		bottom:0;
+		width:100%;
+		background-color:#ddd;
+		z-index:2000;
+	}
+	
+	header>.mobile>nav.on>.m_gnb{
+		position:absolute;
+		top:200px;
+		left:50%;
+		margin-left:-120px;
+	}
+	
+	header>.mobile>nav.on>.m_gnb>li{
+		width:100%;
+		line-height:120px;
+		
+	}
+
+	
+	header>.mobile>nav.on>.m_gnb>li>a{
+		display:block;
+		width:100%;
+		font-size:40px;
+		text-align:center;
 	}
 	
 } /*end of 미디어 쿼리 인트로*/
