@@ -29,13 +29,24 @@ $(function(){
 	
 	//헤더 스크롤 이벤트
 	$(window).on("scroll",function(){
-		if($(window).scrollTop()>10){
+		
+		if( $(window).width() < 768 ){
+			
+			$("header").css("background","rgba(255,255,255,0)");
+			
+		}else{
+			
+			if($(window).scrollTop()>10){
+			
 			$("header").css("background","rgba(255,255,255,0.8)");
 			$("header>nav>.gnb>li>a").css("color","#000");
-		}else{
-			$("header").css("background","rgba(255,255,255,0)");
-			$("header>nav>.gnb>li>a").css("color","#fff");
+			}else{
+				$("header").css("background","rgba(255,255,255,0)");
+				$("header>nav>.gnb>li>a").css("color","#fff");
+			}
 		}
+		
+		
 		
 	});
 	
