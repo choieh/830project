@@ -26,6 +26,17 @@ $(function(){
 		evt.preventDefault();
 	});
 	
+	//헤더 스크롤 이벤트
+	$(window).on("scroll",function(){
+		if($(window).scrollTop()>10){
+			$("header").css("background","rgba(255,255,255,0.8)");
+			$("header>nav>.gnb>li>a").css("color","#000");
+		}else{
+			$("header").css("background","rgba(255,255,255,0)");
+			$("header>nav>.gnb>li>a").css("color","#fff");
+		}
+		
+	});
 	
 	/*
 		load 이벤트: 문서의 텍스트와 이미지등 모든 데이터를 메모리에 적재완료한 시점에 작동한다.
