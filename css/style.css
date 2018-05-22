@@ -22,9 +22,11 @@
 
 /*header*/
 header{
-	position:relative;
+	position:fixed;
 	width:100%;
 	height:100px;
+	z-index:1000;
+	background-color:rgba(255,255,255,0.8);
 }
 
 header>.main_logo{
@@ -96,10 +98,12 @@ header>nav>.gnb>li>a{
 #home{
 	position:relative;
 	width:100%;
+	height:690px;
 	background-image:url(../images/rwd_home_bg_1.jpg);
 	background-position:center center;
 	background-size:cover;
 	background-repeat:no-repeat;
+	
 }
 
 #home:before{ /*어두운 셀로판지 역할*/
@@ -179,7 +183,7 @@ header>nav>.gnb>li>a{
 
 #about,#services,#portfolio,#contact{
 	width:100%;
-	height:500px;
+	height:700px;
 	outline:1px solid red;
 }
 
