@@ -13,25 +13,18 @@ $(function(){
 	];
 	*/
 	
-	var top_container = [
-		$("#home").offset().top,
-		$("#about").offset().top,
-		$("#services").offset().top,
-		$("#portfolio").offset().top,
-		$("#contact").offset().top
-	];
-	
-	
+
 	console.log($("#home").offset().top,$("#about").offset().top,$("#services").offset().top,
 	$("#portfolio").offset().top,$("#contact").offset().top);
 	
+	console.log( $(window).height() );
 	
-	
+	var sectionHeight = $(window).height();
 	var nowIdx = 0;
 
 	$(".gnb>li>a").on("click",function(evt){
 		nowIdx = $(".gnb>li>a").index(this);
-		$("html,body").animate({scrollTop:top_container[nowIdx+1]-100});
+		$("html,body").animate({scrollTop:sectionHeight*(nowIdx+1)-100});
 		evt.preventDefault();
 	});
 	
@@ -53,8 +46,8 @@ $(function(){
 			
 			if($(window).scrollTop()>10){
 			
-			$("header").css("background","rgba(0,0,0,0.8)");
-			$("header>nav>.gnb>li>a").css("color","#fff");
+			$("header").css("background","rgba(255,255,255,0.8)");
+			$("header>nav>.gnb>li>a").css("color","#000");
 			}else{
 				$("header").css("background","rgba(255,255,255,0)");
 				$("header>nav>.gnb>li>a").css("color","#000");
@@ -150,10 +143,15 @@ $(function(){
 		
 		//pc모드 - 인라인방식 적용(특정도값 1000점)
 		$("#home").height($(window).height()); 
+		
+		
+		
+		/*
 		$("#about").height($(window).height()); 
 		$("#services").height($(window).height()); 
 		$("#portfolio").height($(window).height()); 
 		$("#contact").height($(window).height()); 
+		*/	
 			
 	}); 
 	
