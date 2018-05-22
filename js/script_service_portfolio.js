@@ -3,20 +3,6 @@ $(function(){
 	var nowIdx =0;
 	var interval_id;
 	
-	//슬라이드 - 자동 실행
-	setInterval(function(){
-
-		//다음번 슬라이드의 인덱스번호를 정함
-		if(nowIdx==2){
-			nowIdx=0;
-		}else{
-			nowIdx=nowIdx+1;
-		}
-		
-		//컨테이너의 left좌표값을 지정
-		$(".slide-container").stop().animate({"left":-100*nowIdx+"%"});
-	
-	},2000); //2초마다 함수를 실행
 	
 	
 		//슬라이드 - 이전 버튼
@@ -27,14 +13,11 @@ $(function(){
 		clearInterval(interval_id);
 		
 		//1)이전 슬라이드에 해당하는 인덱스값을 추출
-		if(nowIdx==2){
-			nowIdx=0;
+		if(nowIdx==0){
+			nowIdx=2;
 		}else{
-			nowIdx=nowIdx+1;
+			nowIdx=nowIdx-1;
 		}
-		
-		
-		
 		
 		//2)인덱스값에 매칭되는 슬라이드 위치로 이동
 		$("#services>.slides-container").stop().animate({"left":-100*nowIdx+"%"});
@@ -81,5 +64,12 @@ $(function(){
 		
 		evt.preventDefault();
 	});
+	
+	//슬라이드 - 자동 실행
+	interval_id = setInterval(function(){
+
+		$("#services>.slides-next").trigger("click");
+	
+	},2000); //2초마다 함수를 실행
 
 });

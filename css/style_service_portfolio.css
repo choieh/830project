@@ -4,7 +4,7 @@
 #services{
 	overflow:hidden;
 	position:relative;
-	
+	width:100%;
 }
 #services>.slide-container{
 	position:absolute;
@@ -18,24 +18,24 @@
 }
 #services>.slide-container>li{
 	float:left;
-	width:1920px;
+	width:33.3333%;
 	height:1080px;
 	text-indent:-9999px;
+	background-position:50% 50%;
+	background-size:cover;
+	background-repeat:no-repeat;
 }
 
 #services>.slide-container>li:nth-child(1){
 	background-image:url(../images/slide1.jpg);
-	background-position:center center;
 }
 
 #services>.slide-container>li:nth-child(2){
 	background-image:url(../images/slide2.jpg);
-	background-position:center center;
 }
 
 #services>.slide-container>li:nth-child(3){
 	background-image:url(../images/slide3.jpg);
-	background-position:center center;
 }
 
 #services>div>.circle{
