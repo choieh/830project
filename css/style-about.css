@@ -60,9 +60,8 @@ section>.subject>.sub_text{
 #about>article{
 	position:absolute;
 	right:50%;
-	top:50%;
 	margin-right:-550px;
-	margin-top:-70px;
+	margin-top:-320px;
 	width:1100px;
 	height:400px;
 	*zoom:1;
