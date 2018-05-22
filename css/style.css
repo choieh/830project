@@ -1,5 +1,5 @@
 @charset "utf-8";
-
+@import url('https://fonts.googleapis.com/css?family=Quicksand:500');
 
 .loading{
 	/* 화면전체를 꽉 채우는 방법 */
@@ -79,6 +79,7 @@ header>nav>.gnb>li>a{
 	width:80px;
 	height:30px;
 	color:#fff;
+	font-family:Quicksand;
 	text-align:center;
 	line-height:30px;
 }
