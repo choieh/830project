@@ -1,5 +1,6 @@
 $(function(){
 	
+	var check = true;
 	
 	//각 섹션별 top값
 	var top_container = [
@@ -28,13 +29,24 @@ $(function(){
 	
 	//헤더 스크롤 이벤트
 	$(window).on("scroll",function(){
-		if($(window).scrollTop()>10){
+		
+		if( $(window).width() < 768 ){
+			
+			$("header").css("background","rgba(255,255,255,0)");
+			
+		}else{
+			
+			if($(window).scrollTop()>10){
+			
 			$("header").css("background","rgba(255,255,255,0.8)");
 			$("header>nav>.gnb>li>a").css("color","#000");
-		}else{
-			$("header").css("background","rgba(255,255,255,0)");
-			$("header>nav>.gnb>li>a").css("color","#fff");
+			}else{
+				$("header").css("background","rgba(255,255,255,0)");
+				$("header>nav>.gnb>li>a").css("color","#fff");
+			}
 		}
+		
+		
 		
 	});
 	
@@ -63,6 +75,56 @@ $(function(){
 			
 		}	
 		
+	
+		
+	//모바일 버전 메뉴버튼 클릭시
+	$("header>.btn").on("click",function(){
+		
+		$(".mobile>nav").addClass("on").toggle();
+		
+		if(check == true){
+			
+			$("header>.btn>.fa-bars").hide();
+			$("header>.btn>.fa-times").css({
+				"display":"block"
+			});
+			
+			
+			check = false;
+			
+		}else{
+			$("header>.btn>.fa-bars").show();
+			$("header>.btn>.fa-times").css("display","none");
+			
+			check = true;
+		}
+		
+	});
+	
+	
+	//모베일 상세메뉴 버튼 클릭시 메뉴창 사라짐
+	$("header>.mobile>nav>.m_gnb>li").on("click",function(){
+		
+		$("header>.mobile>nav").removeClass("on");
+		$("header>.mobile>nav").hide();
+		
+		
+		if(check == true){
+			
+			$("header>.btn>.fa-bars").hide();
+			$("header>.btn>.fa-times").css("display","block");	
+			
+			check = false;
+			
+		}else{
+			$("header>.btn>.fa-bars").show();
+			$("header>.btn>.fa-times").css("display","none");
+			
+			check = true;
+		}
+		
+		
+	});
 		
 		
 		//pc모드 - 인라인방식 적용(특정도값 1000점)
