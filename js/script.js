@@ -16,7 +16,7 @@ $(function(){
 
 	$(".gnb>li>a").on("click",function(evt){
 		nowIdx = $(".gnb>li>a").index(this);
-		$("html,body").animate({scrollTop:top_container[nowIdx]-100});
+		$("html,body").animate({scrollTop:top_container[nowIdx]-50});
 		evt.preventDefault();
 	});
 	
@@ -58,6 +58,11 @@ $(function(){
 	$(".loading").delay(350).fadeOut(1000);
 	
 	$("#home").height($(window).height());//DOM트리 구성이 완료된 시점(ready)에 높이값 설정
+	$("#services").height($(window).height());
+	$("#portfolio").height($(window).height());
+	$("#contact").height($(window).height());
+	
+	
 	
 	$(window).on("load resize",function(){ /*callback함수 : 이벤트가 일어났을때 실행되는 함수*/
 	

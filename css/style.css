@@ -80,23 +80,12 @@ header>nav>.gnb>li>a{
 	display:block;
 	width:80px;
 	height:30px;
-	color:#fff;
+	color:#000;
 	font-family:Quicksand;
 	text-align:center;
 	line-height:30px;
 }
 
-
-.middle_logo{
-	position:absolute;
-	left:50%;
-	color:#fff;
-	/*margin-left 는 제이쿼리에서 동적으로 설정*/
-	font-size:24px;
-	text-indent:-9999px;
-	z-index:100;
-	
-}
 
 header>.btn, header>.mobile{
 	display:none;
@@ -108,19 +97,8 @@ header>.btn, header>.mobile{
 	position:relative;
 	width:100%;
 	height:690px;
-<<<<<<< HEAD
-<<<<<<< HEAD
-	background-image:url(../images/rwd_home_bg_1.jpg);
-	background-position:center center;
-	background-size:cover;
-	background-repeat:no-repeat;
-	
-=======
 	background-color:#FFF;
->>>>>>> dbc23edfd17c5bba277b178d2dd72f2047583ac8
-=======
-	background-color:#FFF;
->>>>>>> dbc23edfd17c5bba277b178d2dd72f2047583ac8
+
 }
 
 
@@ -138,8 +116,7 @@ header>.btn, header>.mobile{
 #home>.intro>h2{
 	position:absolute;
 	top:50%;
-	left:500px;
-	margin-top:-128px;
+	left:50%;
 	display:block;
 	width:586px;
 	height:256px;
@@ -147,19 +124,22 @@ header>.btn, header>.mobile{
 	background-image:url(../images/about_bgi.png);
 	background-position:center center;
 	background-repeat:no-repeat;
+	
+	transform: translate(-50%,-50%);
 }
 
 
 #home>.intro>p{
 	position:absolute;
-	top:50%;
-	left:500px;
-	transform: translate(0,-50%);
-	color:#f7f7f7;
+	top:150px;
+	left:50%;
+	color:#000;
 	line-height:1.8;/* 1.8 = 180% */
 	text-align:center;
 	letter-spacing:1px;
 	z-index:2000;
+	
+	transform: translate(-50%,0);
 }
 
 
@@ -239,7 +219,7 @@ footer>address{
 
 	#home>.intro{
 		
-		transform: translate(0,-60%);
+		transform: translate(0,-60%); 
 	}
 	
 	#home>.intro>h2{
