@@ -178,14 +178,6 @@ header>.btn, header>.mobile{
 	animation-iteration-count:infinite;
 }
 
-/*★section 임시 공통사항*/
-
-#about,#services,#portfolio,#contact{
-	width:100%;
-	outline:1px solid red;
-}
-
-
 /*footer*/
 footer{
 	width:100%;
