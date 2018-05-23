@@ -82,6 +82,12 @@ $(function(){
 	$("#contact").height($(window).height());
 	
 	
+	//문서가 load(된 시점)이벤트 구문
+	$(window).on("load",function(){
+		$("html,body").animate({scrollTop:0});
+		
+	});
+	
 	
 	$(window).on("load resize",function(){ /*callback함수 : 이벤트가 일어났을때 실행되는 함수*/
 	

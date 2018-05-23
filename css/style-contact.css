@@ -4,6 +4,11 @@
 	position:relative;
 }
 
+/*subject*/
+#contact>.subject{
+	margin-top:-80px;
+	z-index:3000;
+}
 
 
 #contact>.css-vertical-text2{
@@ -39,7 +44,7 @@
 	float:left;
 	width:270px;
 	height:450px;
-	margin:9px 40px;
+	margin:9px 40px 0;
 	margin-bottom:0;
 }
 #contact>article>div>.ctpic{
