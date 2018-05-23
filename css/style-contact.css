@@ -94,8 +94,12 @@
 
 }
 
-
-
+/*미디어 쿼리*/
+@media screen and (max-width:768px){
+	#contact>article{
+		height:100%;
+	}
+}
 
 
 

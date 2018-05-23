@@ -280,7 +280,7 @@ footer>address{
 	
 	
 		/*메뉴버튼 클릭 시*/
-	header>.btn>.fa-times{
+header>.btn>.fa-times{
 		display:none;
 		position:absolute;
 		top:10;
@@ -292,7 +292,7 @@ footer>address{
 
 
 		
-	header>.mobile>nav.on{
+header>.mobile>nav.on{
 		position:fixed;
 		top:0;
 		left:0;
@@ -303,21 +303,21 @@ footer>address{
 		z-index:2000;
 	}
 	
-	header>.mobile>nav.on>.m_gnb{
+header>.mobile>nav.on>.m_gnb{
 		position:absolute;
 		top:200px;
 		left:50%;
 		margin-left:-120px;
 	}
 	
-	header>.mobile>nav.on>.m_gnb>li{
+header>.mobile>nav.on>.m_gnb>li{
 		width:100%;
 		line-height:120px;
 		
 	}
 
 	
-	header>.mobile>nav.on>.m_gnb>li>a{
+header>.mobile>nav.on>.m_gnb>li>a{
 		display:block;
 		width:100%;
 		font-size:40px;
@@ -325,7 +325,7 @@ footer>address{
 	}
 		
 footer{
-	background-color:red;
+	
 }
 	
 } /*end of 미디어 쿼리 인트로*/

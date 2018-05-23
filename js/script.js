@@ -50,7 +50,6 @@ $(function(){
 				"top":0,
 				"background":"rgba(255,255,255,0.5)"
 			});
-			
 			// $("header>.main_logo").css("z-index","5000");
 			
 		}else{
@@ -97,6 +96,7 @@ $(function(){
 			$(".middle_logo").css({"margin-left":-$(".middle_logo").width()/2,
 			"top":$("#home h2").offset().top-40
 			});
+
 			
 		}	
 		
@@ -153,8 +153,7 @@ $(function(){
 		
 		
 		//pc모드 - 인라인방식 적용(특정도값 1000점)
-		$("#home").height($(window).height()); 
-		
+		$("#home").height($(window).height());
 		
 		
 		/*
