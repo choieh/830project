@@ -5,12 +5,12 @@
 @import url('https://fonts.googleapis.com/css?family=Quicksand:500');
 #about{
 	position:relative;
-	background-color:#fff ;
+	background-color:#fff;
+	outline: 1px solid red;
 }
 
 /*공통요소*/
 section{
-	
 }
 
 
@@ -25,7 +25,7 @@ section>.subject{
 section>.subject>.main_text{
 	position:absolute;
 	width:600px;
-	height:50px;	
+	height:50px;
 	margin-top:210px;
 	color:#efc5ba;
 	font-size:105px;
@@ -49,9 +49,9 @@ section>.subject>.sub_text{
 	writing-mode: vertical-rl;
 	-webkit-transform:rotate(180deg);
 	-moz-transform:rotate(180deg);
-	-o-transform: rotate(180deg); 
+	-o-transform: rotate(180deg);
 	display:block;
-	margin:130px 0 0 130px;
+	margin-left: 40px;
 	font-size:14px;
 	font-weight:bold;
 	text-align:center;
