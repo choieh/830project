@@ -1,30 +1,34 @@
 $(function(){
 	
-	var check = true;
-	
-	//각 섹션별 top값
-	/*
-	var top_container = [
-		$("#home").offset().top,
-		$("#about").offset().top,
-		$("#services").offset().top,
-		$("#portfolio").offset().top,
-		$("#contact").offset().top
-	];
-	*/
-	
-
-	console.log($("#home").offset().top,$("#about").offset().top,$("#services").offset().top,
-	$("#portfolio").offset().top,$("#contact").offset().top);
-	
-	console.log( $(window).height() );
-	
+	var check = true;	
 	var sectionHeight = $(window).height();
 	var nowIdx = 0;
 
 	$(".gnb>li>a").on("click",function(evt){
 		nowIdx = $(".gnb>li>a").index(this);
-		$("html,body").animate({scrollTop:sectionHeight*(nowIdx+1)-100});
+		
+		//nowIdx == 2 (portfolio일 경우 350px 위로)
+		if(nowIdx == 2){
+			$("html,body").animate({scrollTop:sectionHeight*3-350});
+		}else{
+			$("html,body").animate({scrollTop:sectionHeight*(nowIdx+1)-100});
+		}
+		
+		evt.preventDefault();
+	});
+	
+	
+	//모바일 메뉴
+	$(".mobile>nav>.m_gnb>li>a").on("click",function(evt){
+		nowIdx = $(".mobile>nav>.m_gnb>li>a").index(this);
+		
+		//nowIdx == 2 (portfolio일 경우 350px 위로)
+		if(nowIdx == 2){
+			$("html,body").animate({scrollTop:sectionHeight*3-400});
+		}else{
+			$("html,body").animate({scrollTop:sectionHeight*(nowIdx+1)-210});
+		}
+		
 		evt.preventDefault();
 	});
 	
@@ -35,12 +39,18 @@ $(function(){
 		evt.preventDefault();
 	});
 	
+	
+	// "background":"rgba(255,255,255,0.8)"
 	//헤더 스크롤 이벤트
 	$(window).on("scroll",function(){
 		
 		if( $(window).width() < 768 ){
 			
-			$("header").css("background","rgba(255,255,255,0)");
+			$("header").css({
+				"top":0,
+				"background":"rgba(255,255,255,0.5)"
+			});
+			// $("header>.main_logo").css("z-index","5000");
 			
 		}else{
 			
@@ -72,6 +82,12 @@ $(function(){
 	$("#contact").height($(window).height());
 	
 	
+	//문서가 load(된 시점)이벤트 구문
+	$(window).on("load",function(){
+		$("html,body").animate({scrollTop:0});
+		
+	});
+	
 	
 	$(window).on("load resize",function(){ /*callback함수 : 이벤트가 일어났을때 실행되는 함수*/
 	
@@ -86,6 +102,7 @@ $(function(){
 			$(".middle_logo").css({"margin-left":-$(".middle_logo").width()/2,
 			"top":$("#home h2").offset().top-40
 			});
+
 			
 		}	
 		
@@ -142,8 +159,7 @@ $(function(){
 		
 		
 		//pc모드 - 인라인방식 적용(특정도값 1000점)
-		$("#home").height($(window).height()); 
-		
+		$("#home").height($(window).height());
 		
 		
 		/*

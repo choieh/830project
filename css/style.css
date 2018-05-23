@@ -178,14 +178,6 @@ header>.btn, header>.mobile{
 	animation-iteration-count:infinite;
 }
 
-/*★section 임시 공통사항*/
-
-#about,#services,#portfolio,#contact{
-	width:100%;
-	outline:1px solid red;
-}
-
-
 /*footer*/
 footer{
 	width:100%;
@@ -196,7 +188,7 @@ footer>address{
 	width:100%;
 	height:50px;
 	font-size:12px;
-	line-height:50px;
+	line-height:70px;
 	text-align:center;
 }
 
@@ -221,7 +213,7 @@ footer>address{
 	}
 	
 	#home>.intro>h2{
-		height:60px;
+		height:256px;
 		margin-bottom:80px;
 		font-size:50px;
 		line-height:60px;
@@ -247,8 +239,9 @@ footer>address{
 	}
 	
 	header>.main_logo{
-		position:absolute;
-		top:-50px;
+		position:fixed;
+		top:50px;
+		left:-50px;
 	}
 	
 	header>nav{
@@ -257,9 +250,10 @@ footer>address{
 	
 	/*모바일 메뉴버튼*/
 	header>.btn{
+		display:block;
 		position:fixed;
 		top:20px;
-		right:10px;
+		right:30px;
 		width:50px;
 		height:50px;
 		padding:5px;
@@ -277,7 +271,7 @@ footer>address{
 	}
 	
 	/*클릭 전*/
-	header>.btn, header>.mobile{
+	header>.mobile{
 		display:block;
 	}
 	
@@ -287,7 +281,7 @@ footer>address{
 	
 	
 		/*메뉴버튼 클릭 시*/
-	header>.btn>.fa-times{
+header>.btn>.fa-times{
 		display:none;
 		position:absolute;
 		top:10;
@@ -299,37 +293,41 @@ footer>address{
 
 
 		
-	header>.mobile>nav.on{
+header>.mobile>nav.on{
 		position:fixed;
 		top:0;
 		left:0;
 		right:0;
 		bottom:0;
 		width:100%;
-		background-color:#ddd;
+		background-color:#efc5ba;
 		z-index:2000;
 	}
 	
-	header>.mobile>nav.on>.m_gnb{
+header>.mobile>nav.on>.m_gnb{
 		position:absolute;
 		top:200px;
 		left:50%;
 		margin-left:-120px;
 	}
 	
-	header>.mobile>nav.on>.m_gnb>li{
+header>.mobile>nav.on>.m_gnb>li{
 		width:100%;
 		line-height:120px;
 		
 	}
 
 	
-	header>.mobile>nav.on>.m_gnb>li>a{
+header>.mobile>nav.on>.m_gnb>li>a{
 		display:block;
 		width:100%;
 		font-size:40px;
 		text-align:center;
 	}
+		
+footer{
+	
+}
 	
 } /*end of 미디어 쿼리 인트로*/
 
