@@ -213,7 +213,7 @@ footer>address{
 	}
 	
 	#home>.intro>h2{
-		height:60px;
+		height:256px;
 		margin-bottom:80px;
 		font-size:50px;
 		line-height:60px;
@@ -239,8 +239,9 @@ footer>address{
 	}
 	
 	header>.main_logo{
-		position:absolute;
-		top:-50px;
+		position:fixed;
+		top:50px;
+		left:-50px;
 	}
 	
 	header>nav{
@@ -251,7 +252,7 @@ footer>address{
 	header>.btn{
 		position:fixed;
 		top:20px;
-		right:10px;
+		right:30px;
 		width:50px;
 		height:50px;
 		padding:5px;
@@ -298,7 +299,7 @@ footer>address{
 		right:0;
 		bottom:0;
 		width:100%;
-		background-color:#ddd;
+		background-color:#efc5ba;
 		z-index:2000;
 	}
 	
@@ -322,6 +323,7 @@ footer>address{
 		font-size:40px;
 		text-align:center;
 	}
+		
 	
 } /*end of 미디어 쿼리 인트로*/
 

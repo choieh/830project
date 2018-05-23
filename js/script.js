@@ -1,30 +1,34 @@
 $(function(){
 	
-	var check = true;
-	
-	//각 섹션별 top값
-	/*
-	var top_container = [
-		$("#home").offset().top,
-		$("#about").offset().top,
-		$("#services").offset().top,
-		$("#portfolio").offset().top,
-		$("#contact").offset().top
-	];
-	*/
-	
-
-	console.log($("#home").offset().top,$("#about").offset().top,$("#services").offset().top,
-	$("#portfolio").offset().top,$("#contact").offset().top);
-	
-	console.log( $(window).height() );
-	
+	var check = true;	
 	var sectionHeight = $(window).height();
 	var nowIdx = 0;
 
 	$(".gnb>li>a").on("click",function(evt){
 		nowIdx = $(".gnb>li>a").index(this);
-		$("html,body").animate({scrollTop:sectionHeight*(nowIdx+1)-100});
+		
+		//nowIdx == 2 (portfolio일 경우 350px 위로)
+		if(nowIdx == 2){
+			$("html,body").animate({scrollTop:sectionHeight*3-350});
+		}else{
+			$("html,body").animate({scrollTop:sectionHeight*(nowIdx+1)-100});
+		}
+		
+		evt.preventDefault();
+	});
+	
+	
+	//모바일 메뉴
+	$(".mobile>nav>.m_gnb>li>a").on("click",function(evt){
+		nowIdx = $(".mobile>nav>.m_gnb>li>a").index(this);
+		
+		//nowIdx == 2 (portfolio일 경우 350px 위로)
+		if(nowIdx == 2){
+			$("html,body").animate({scrollTop:sectionHeight*3-280});
+		}else{
+			$("html,body").animate({scrollTop:sectionHeight*(nowIdx+1)-30});
+		}
+		
 		evt.preventDefault();
 	});
 	
@@ -35,12 +39,19 @@ $(function(){
 		evt.preventDefault();
 	});
 	
+	
+	// "background":"rgba(255,255,255,0.8)"
 	//헤더 스크롤 이벤트
 	$(window).on("scroll",function(){
 		
 		if( $(window).width() < 768 ){
 			
-			$("header").css("background","rgba(255,255,255,0)");
+			$("header").css({
+				"top":0,
+				"background":"rgba(255,255,255,0.5)"
+			});
+			
+			// $("header>.main_logo").css("z-index","5000");
 			
 		}else{
 			
