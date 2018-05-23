@@ -24,9 +24,9 @@ $(function(){
 		
 		//nowIdx == 2 (portfolio일 경우 350px 위로)
 		if(nowIdx == 2){
-			$("html,body").animate({scrollTop:sectionHeight*3-280});
+			$("html,body").animate({scrollTop:sectionHeight*3-400});
 		}else{
-			$("html,body").animate({scrollTop:sectionHeight*(nowIdx+1)-30});
+			$("html,body").animate({scrollTop:sectionHeight*(nowIdx+1)-210});
 		}
 		
 		evt.preventDefault();
