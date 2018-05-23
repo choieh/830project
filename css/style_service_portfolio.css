@@ -86,15 +86,10 @@
 }
 
 
-<<<<<<< HEAD
-/*portfolio*/
-#portfolio{
-=======
 
 /*portfolio*/
 #portfolio{
-	
->>>>>>> eh
+
 	width:100%;
 }
 #portfolio>.box-container{
@@ -106,13 +101,10 @@
 	display:block; clear:both; content:"";
 }
 #portfolio>.box-container>li{
-<<<<<<< HEAD
 	float:left;
 	width:33.3333%;
 	height:50%;
 	background-color:#FF0;
-	outline:1px solid red;
-=======
 	overflow:hidden;
 	float:left;
 	width:33.3333%;
@@ -139,7 +131,7 @@
 }
 #portfolio>.box-container>li:nth-child(6){
 	background-image:url(../images/pf6.jpg);
->>>>>>> eh
+
 }
 
 
